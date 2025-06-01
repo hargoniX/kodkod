@@ -19,7 +19,7 @@ def configure(conf):
 def build(bld):
     DEFINES = ['__STDC_LIMIT_MACROS', '__STDC_FORMAT_MACROS']
     INCLUDES = ['.', './minisatp'] 
-    CXXFLAGS = [ '-w', '-O3', '-fPIC', '-ffloat-store']
+    CXXFLAGS = [ '-w', '-O3', '-fPIC', '-ffloat-store', '-std=c++11']
     
     bld.objects(source = ['minisatp/Solver.C', 'minisatp/Proof.C', 'minisatp/File.C'],
                 target = 'minisatp-core',

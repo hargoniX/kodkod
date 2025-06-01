@@ -22,6 +22,7 @@
 package kodkod.engine.satlab;
 
 import java.util.NoSuchElementException;
+import java.util.Comparator;
 
 import org.sat4j.specs.ContradictionException;
 import org.sat4j.specs.ISolver;
@@ -253,6 +254,8 @@ final class SAT4J implements SATSolver {
 		public void sort() 						{ throw new UnsupportedOperationException(); }
 		public void sortUnique() 				{ throw new UnsupportedOperationException(); }
 		public IVecInt[] subset(int arg0) 		{ throw new UnsupportedOperationException(); }
+		public IVecInt clone() { throw new UnsupportedOperationException(); }
+		public void sort(Comparator<Integer> comparator) { throw new UnsupportedOperationException(); }
 	}
 	
 	public static void main(String[] args) {

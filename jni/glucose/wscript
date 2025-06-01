@@ -21,7 +21,7 @@ def build(bld):
     
     DEFINES = ['__STDC_LIMIT_MACROS', '__STDC_FORMAT_MACROS']
     INCLUDES = ['.','./glucose-syrup'] 
-    CXXFLAGS = [ '-w', '-O3', '-fPIC']
+    CXXFLAGS = [ '-w', '-O3', '-fPIC', '-std=c++11']
 
     bld.objects(source = ['glucose-syrup/utils/Options.cc', 'glucose-syrup/utils/System.cc'],
                 target = 'glucose-utils',

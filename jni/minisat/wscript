@@ -20,7 +20,7 @@ def configure(conf):
 def build(bld):
     DEFINES = ['__STDC_LIMIT_MACROS', '__STDC_FORMAT_MACROS']
     INCLUDES = ['.','./minisat'] 
-    CXXFLAGS = [ '-w', '-O3', '-fPIC']
+    CXXFLAGS = [ '-w', '-O3', '-fPIC', '-std=c++11']
     
     bld.objects(source = ['minisat/minisat/utils/Options.cc', 'minisat/minisat/utils/System.cc'],
                 target = 'minisat-utils',

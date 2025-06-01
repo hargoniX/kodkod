@@ -20,7 +20,7 @@ def configure(conf):
 
 def build(bld):
     DEFINES = ['NDBLSCR', 'NLGLOG','NDEBUG', 'NCHKSOL', 'NLGLPICOSAT', 'NLGLDRUPLIG', 'NLGLYALSAT']
-    CFLAGS = ['-w', '-O3', '-fPIC']
+    CFLAGS = ['-w', '-O3', '-fPIC', '-std=c++11']
     INCLUDES = ['.']
     
     bld.objects(source = 'code/lglib.c',

@@ -13,10 +13,10 @@ def configure(conf):
 def build(bld):
     bld.recurse('jni')
 
-    bld(rule = 'wget http://download.forge.ow2.org/sat4j/${TGT}',
-        target = 'sat4j-core-v20130525.zip')
+    bld(rule = 'wget https://release.ow2.org/sat4j/${TGT}',
+        target = 'sat4j-core-v20201214.zip')
     bld(rule = 'unzip ${SRC} -x *src.jar',
-        source = 'sat4j-core-v20130525.zip',
+        source = 'sat4j-core-v20201214.zip',
         target = 'org.sat4j.core.jar')
     bld.add_group()
 
