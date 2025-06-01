@@ -132,7 +132,7 @@ public class ListDebug extends ListEncoding {
 	
 	Solution debug(int size) {
 		final Solver solver = new Solver();
-		solver.options().setSolver(SATFactory.MiniSatProver);
+		solver.options().setSolver(SATFactory.DefaultSAT4J);
 		solver.options().setCoreGranularity(1);
 		solver.options().setLogTranslation(1);
 		return solver.solve(debugSpec(), debugBounds(size));

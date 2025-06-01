@@ -128,7 +128,7 @@ public final class MGT066 {
 				usage();
 			final MGT066 model = new MGT066();
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 			solver.options().setSymmetryBreaking(n*n);
 			final Formula f = model.axioms();
 			final Bounds b = model.bounds(n);

@@ -336,7 +336,7 @@ public final class Dijkstra {
 		
 		final Dijkstra model = new Dijkstra();
 		final Solver solver = new Solver();
-		solver.options().setSolver(SATFactory.MiniSat);
+		solver.options().setSolver(SATFactory.DefaultSAT4J);
 
 		try {
 			final Formula noDeadlocks = model.checkDijkstraPreventsDeadlocks();

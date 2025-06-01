@@ -216,7 +216,7 @@ public final class Viktor {
 			final Viktor model = new Viktor();
 			
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 			solver.options().setReporter(new ConsoleReporter());
 			solver.options().setBitwidth(7);
 			final Formula f = model.checkEquations();

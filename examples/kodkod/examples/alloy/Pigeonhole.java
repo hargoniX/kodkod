@@ -107,7 +107,7 @@ public final class Pigeonhole {
 		try {
 			final int p = Integer.parseInt(args[0]);
 			final int h = Integer.parseInt(args[1]);
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 			solver.options().setSymmetryBreaking(p);
 			final Formula show = model.declarations().and(model.pigeonPerHole());
 			final Solution sol = solver.solve(show, model.bounds(p,h));

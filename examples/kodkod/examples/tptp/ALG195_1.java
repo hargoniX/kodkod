@@ -374,7 +374,7 @@ public final class ALG195_1 {
 	
 			final ALG195_1 model = new ALG195_1();
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 			final Formula f = model.axioms().and(model.co1().not());
 			final Bounds b = model.bounds();
 //			System.out.println(model.decls());

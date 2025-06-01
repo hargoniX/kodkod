@@ -4,14 +4,11 @@ import os.path
 
 def options(opt):
     opt.load('java')
-    opt.recurse('jni')
 
 def configure(conf):
     conf.load('java')
-    conf.recurse('jni')
 
 def build(bld):
-    bld.recurse('jni')
 
     bld(rule = 'wget https://release.ow2.org/sat4j/${TGT}',
         target = 'sat4j-core-v20201214.zip')
@@ -46,7 +43,6 @@ def build(bld):
 def distclean(ctx):
     from waflib import Scripting
     Scripting.distclean(ctx)
-    ctx.recurse('jni')
 
 
 from waflib.Build import BuildContext

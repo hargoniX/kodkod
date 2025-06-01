@@ -227,7 +227,7 @@ public final class BlockedNQueens2 {
 			System.out.println(b);
 			System.out.println(PrettyPrinter.print(f, 1));
 
-			s.options().setSolver(SATFactory.MiniSat);
+			s.options().setSolver(SATFactory.DefaultSAT4J);
 			s.options().setBitwidth(33 - Integer.numberOfLeadingZeros(b.universe().size()));
 			s.options().setReporter(new ConsoleReporter());
 			

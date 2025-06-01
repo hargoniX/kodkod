@@ -317,7 +317,7 @@ public final class SET943 {
 				usage();
 			final SET943 model = new SET943();
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 //			solver.options().setSymmetryBreaking(1000);
 //			solver.options().setFlatten(false);
 			final Formula f = model.checkT96_zfmisc_1();

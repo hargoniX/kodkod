@@ -573,7 +573,7 @@ public final class Hotel {
 		final long start = System.currentTimeMillis();
 		final Set<Formula> minCore = new LinkedHashSet<Formula>(core);
 		Solver solver = new Solver(); 
-		solver.options().setSolver(SATFactory.MiniSat);
+		solver.options().setSolver(SATFactory.DefaultSAT4J);
 		for(Iterator<Formula> itr = minCore.iterator(); itr.hasNext();) {
 			Formula f = itr.next();
 			Formula noF = Formula.TRUE;
@@ -612,7 +612,7 @@ public final class Hotel {
 				usage();
 			final Hotel model = new Hotel();
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSatProver);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 			solver.options().setLogTranslation(1);
 			
 			final Formula f = model.checkNoBadEntry();

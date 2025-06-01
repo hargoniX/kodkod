@@ -236,7 +236,7 @@ public final class Transpose4x4UnaryLR {
 	 */
 	final Options options() {
 		final Options opt = new Options();
-		opt.setSolver(SATFactory.Glucose);
+		opt.setSolver(SATFactory.DefaultSAT4J);
 		opt.setBitwidth(6);
 		opt.setReporter(new ConsoleReporter());
 		return opt;

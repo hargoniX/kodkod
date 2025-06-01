@@ -80,7 +80,7 @@ public class GEO092 extends GEO158 {
 		
 	
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 			final GEO092 model = new GEO092();
 			final Formula f = model.checkProposition2141();
 			

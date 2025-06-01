@@ -69,7 +69,7 @@ public final class GEO115 extends GEO159 {
 		
 	
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 	
 			final GEO115 model = new GEO115();
 			final Formula f = model.theorem385();

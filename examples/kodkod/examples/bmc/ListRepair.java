@@ -70,7 +70,7 @@ public class ListRepair extends ListEncoding {
 	
 	Solution repair(int size) {
 		final Solver solver = new Solver();
-		solver.options().setSolver(SATFactory.MiniSat);
+		solver.options().setSolver(SATFactory.DefaultSAT4J);
 		return solver.solve(repairSpec(), repairBounds(size));
 	}
 	

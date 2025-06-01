@@ -166,7 +166,7 @@ import kodkod.instance.Universe;
 			solver.options().setBitwidth(6);
 			
 //			solver.options().setSolver(SATFactory.ZChaff);
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 			
 			solver.options().setSymmetryBreaking(0);
 			solver.options().setBitwidth(32 - Integer.numberOfLeadingZeros(persons));

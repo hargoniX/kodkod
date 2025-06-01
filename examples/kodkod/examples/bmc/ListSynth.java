@@ -116,7 +116,7 @@ public class ListSynth extends ListEncoding {
 	
 	Solution synth(int size) {
 		final Solver solver = new Solver();
-		solver.options().setSolver(SATFactory.MiniSat);
+		solver.options().setSolver(SATFactory.DefaultSAT4J);
 		return solver.solve(synthSpec(), synthBounds(size));
 	}
 	

@@ -219,7 +219,7 @@ public final class COM008 {
 				usage();
 			final COM008 model = new COM008();
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 //			solver.options().setSymmetryBreaking(22);
 //			solver.options().setFlatten(false);
 			final Formula f = model.checkGoalToBeProved();

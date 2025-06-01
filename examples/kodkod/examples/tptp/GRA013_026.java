@@ -176,7 +176,7 @@ public final class GRA013_026 {
 			
 			final Bounds b = model.bounds();
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 			solver.options().setReporter(new ConsoleReporter());
 			
 			final Formula f = model.checkGoalToBeProved();

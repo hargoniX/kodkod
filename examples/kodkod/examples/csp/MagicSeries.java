@@ -139,7 +139,7 @@ public final class MagicSeries {
 //			System.out.println(f);
 //			System.out.println(b);
 			final Solver s = new Solver();
-			s.options().setSolver(SATFactory.MiniSat);
+			s.options().setSolver(SATFactory.DefaultSAT4J);
 			s.options().setBitwidth(33-Integer.numberOfLeadingZeros(max));
 			s.options().setReporter(new ConsoleReporter());
 			final Solution sol = s.solve(f, b);

@@ -309,7 +309,7 @@ public final class NUM374 {
 				usage();
 			final NUM374 model = new NUM374();
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 			solver.options().setSymmetryBreaking(n*n);
 			final Formula f = model.checkWilkie();
 			final Bounds b = model.bounds(n);

@@ -206,7 +206,7 @@ public final class ToyLists {
 			
 			final Bounds b = model.bounds(l, t);
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSatProver);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 			solver.options().setLogTranslation(1);
 			solver.options().setSymmetryBreaking(1000);
 			

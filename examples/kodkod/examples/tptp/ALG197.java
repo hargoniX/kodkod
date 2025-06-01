@@ -149,7 +149,7 @@ public final class ALG197 extends Quasigroups7 {
 	
 			final ALG197 model = new ALG197();
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 			final Formula f = model.checkCO1();
 			final Bounds b = model.bounds();
 			final Solution sol = solver.solve(f, b);

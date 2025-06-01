@@ -172,7 +172,7 @@ public final class CeilingsAndFloors {
 		
 		final CeilingsAndFloors model = new CeilingsAndFloors();
 		final Solver solver = new Solver();
-		solver.options().setSolver(SATFactory.MiniSat);
+		solver.options().setSolver(SATFactory.DefaultSAT4J);
 		try {
 			final int m = Integer.parseInt(args[0]);
 			final int p = Integer.parseInt(args[1]);

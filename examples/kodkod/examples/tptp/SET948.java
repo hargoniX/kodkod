@@ -356,7 +356,7 @@ public final class SET948 {
 				usage();
 			final SET948 model = new SET948();
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 //			solver.options().setSymmetryBreaking(n*n);
 //			solver.options().setFlatten(false);
 			final Formula f = model.checkT101_zfmisc_1();

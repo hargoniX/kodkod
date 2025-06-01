@@ -62,7 +62,7 @@ public class GEO091 extends GEO158 {
 			final int n = Integer.parseInt(args[0]);
 	
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 			final GEO091 model = new GEO091();
 			final Formula f = model.checkTheorem_2_13();
 			

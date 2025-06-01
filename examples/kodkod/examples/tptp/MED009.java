@@ -60,7 +60,7 @@ public final class MED009 extends MED001 {
 				usage();
 			final MED009 model = new MED009();
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 //			solver.options().setSymmetryBreaking(1000);
 //			solver.options().setFlatten(false);
 			final Formula f = model.checkTranssls2_qige27();

@@ -106,7 +106,7 @@ public final class LatinSquare {
 				usage();
 			final LatinSquare model = new LatinSquare();
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 			solver.options().setSymmetryBreaking(n*n*n);
 			final Formula f = model.latin().and(model.qg5()).and(model.idempotent());
 			final Bounds b = model.bounds(n);

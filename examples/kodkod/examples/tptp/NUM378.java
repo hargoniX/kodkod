@@ -182,7 +182,7 @@ public final class NUM378 {
 	
 			final NUM378 model = new NUM378();
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 			final Formula f = model.decls().and(model.inequalities());
 			final Bounds b = model.bounds();
 //			System.out.println(f);

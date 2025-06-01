@@ -186,7 +186,7 @@ public final class FileSystem {
 			System.out.println(f);
 			final Bounds b = model.bounds(n);
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 		
 			final Solution s = solver.solve(f, b);
 			System.out.println(s);

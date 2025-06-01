@@ -141,7 +141,7 @@ public final class SocialGolfer {
 //			System.out.println(PrettyPrinter.print(f, 2));
 //			System.out.println(b);
 			final Solver s = new Solver();
-			s.options().setSolver(SATFactory.MiniSat);
+			s.options().setSolver(SATFactory.DefaultSAT4J);
 			s.options().setBitwidth(32-Integer.numberOfLeadingZeros(groups*weeks));
 //			s.options().setReporter(new ConsoleReporter());
 			s.options().setSymmetryBreaking(1000);

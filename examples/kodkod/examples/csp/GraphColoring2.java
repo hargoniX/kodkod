@@ -112,7 +112,7 @@ public class GraphColoring2  {
 		try {
 			final GraphColoring2 model = new GraphColoring2(args[0], Enum.valueOf(Graph.Format.class, args[1].toUpperCase()), Integer.parseInt(args[2]));
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 			solver.options().setSymmetryBreaking(0);
 			solver.options().setReporter(new ConsoleReporter());
 			final Formula f = model.coloring();

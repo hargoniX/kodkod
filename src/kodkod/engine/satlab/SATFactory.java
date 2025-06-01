@@ -89,56 +89,6 @@ public abstract class SATFactory {
 	};
 	
 	/**
-	 * The factory that produces instances of Niklas E&eacute;n and Niklas S&ouml;rensson's
-	 * MiniSat solver.
-	 */
-	public static final SATFactory MiniSat = new SATFactory() {
-		public SATSolver instance() {
-			return new MiniSat();
-		}
-		public String toString() { return "MiniSat"; }
-	};
-	
-	/**
-	 * The factory the produces {@link SATProver proof logging} 
-	 * instances of the MiniSat solver.  Note that core
-	 * extraction can incur a significant time overhead during solving,
-	 * so if you do not need this functionality, use the {@link #MiniSat} factory
-	 * instead.
-	 */
-	public static final SATFactory MiniSatProver = new SATFactory() {
-		public SATSolver instance() { 
-			return new MiniSatProver(); 
-		}
-		@Override
-		public boolean prover() { return true; }
-		public String toString() { return "MiniSatProver"; }
-	};
-	
-	/**
-	 * The factory that produces instances of Gilles Audemard and Laurent Simon's 
-	 * Glucose solver.
-	 */
-	public static final SATFactory Glucose = new SATFactory() {
-		public SATSolver instance() {
-			return new Glucose();
-		}
-		public String toString() { return "Glucose"; }
-	};
-	
-	/**
-	 * The factory that produces instances of Armin Biere's
-	 * Lingeling solver.
-	 */
-	public static final SATFactory Lingeling = new SATFactory() {
-		public SATSolver instance() {
-			return new Lingeling();
-		}
-		public boolean incremental() { return false; }
-		public String toString() { return "Lingeling"; }
-	};
-	
-	/**
 	 * Returns a SATFactory that produces SATSolver wrappers for Armin Biere's Plingeling
 	 * solver.  This is a parallel solver that is invoked as an external program rather than 
 	 * via the Java Native Interface.  As a result, it cannot be used incrementally.  Its

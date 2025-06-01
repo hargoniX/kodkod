@@ -311,7 +311,7 @@ public final class RingElection {
 		try {
 			final RingElection model = new RingElection();
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 			
 			final int p = Integer.parseInt(args[0]);
 			final int t = Integer.parseInt(args[1]);

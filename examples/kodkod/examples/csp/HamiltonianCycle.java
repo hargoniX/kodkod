@@ -119,7 +119,7 @@ public final class HamiltonianCycle {
 		System.out.println(f);
 		System.out.println(b);
 		final Solver solver = new Solver();
-		solver.options().setSolver(SATFactory.MiniSat);
+		solver.options().setSolver(SATFactory.DefaultSAT4J);
 		solver.options().setReporter(new ConsoleReporter());
 //		solver.options().setFlatten(false);
 		final Solution s = solver.solve(f,b);

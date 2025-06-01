@@ -317,7 +317,7 @@ public final class TOP020 {
 				usage();
 			final TOP020 model = new TOP020();
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 			final Formula f = model.checkChallenge_AMR_1_4_4();
 			final Bounds b = model.bounds(n);
 //			System.out.println(f);

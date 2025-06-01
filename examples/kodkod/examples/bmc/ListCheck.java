@@ -46,7 +46,7 @@ public class ListCheck extends ListEncoding {
 	
 	Solution check(int size) {
 		final Solver solver = new Solver();
-		solver.options().setSolver(SATFactory.MiniSat);
+		solver.options().setSolver(SATFactory.DefaultSAT4J);
 		return solver.solve(checkSpec(), checkBounds(size));
 	}
 	

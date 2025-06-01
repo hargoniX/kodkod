@@ -343,7 +343,7 @@ public final class LAT258 {
 			
 			final Bounds b = model.bounds(n);
 			final Solver solver = new Solver();
-			solver.options().setSolver(SATFactory.MiniSat);
+			solver.options().setSolver(SATFactory.DefaultSAT4J);
 			
 			final Formula f = model.checkGoalToBeProved();
 			System.out.println(f);

@@ -96,7 +96,7 @@ public final class ToyFilesystem {
 		System.out.println(PrettyPrinter.print(f, 2));
 		final Bounds b = toy.bounds();
 		final Solver solver = new Solver();
-		solver.options().setSolver(SATFactory.MiniSat);
+		solver.options().setSolver(SATFactory.DefaultSAT4J);
 		
 		final Solution s = solver.solve(f, b);
 		System.out.println(s);
